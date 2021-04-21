@@ -19,6 +19,13 @@ class App < Sinatra::Base
 
     end
 
+    get "/desire/:name" do
+        @name = params[:name]
+        "I want you, #{@name}."
+
+      end
+
+
     get "/multiply/:num1/:num2" do
       @num = params[:num1].to_i * params[:num2].to_i
       "#{@num}"
